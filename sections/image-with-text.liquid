@@ -38,7 +38,7 @@
 <div class="section-{{ section.id }}-padding gradient" {% if section.settings.section_color_scheme != blank %}style="background-color: {{ section.settings.section_color_scheme }}"{% endif %}>
   <div class="page-width">
     <div class="image-with-text image-with-text--{{ section.settings.content_layout }} isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-      <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
+      <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %} image-with-text__grid-mobile--{{ section.settings.layout_mobile }}">
         <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
           <div
             class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings {% if section.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
@@ -335,6 +335,22 @@
       ],
       "default": "left",
       "label": "t:sections.image-with-text.settings.mobile_content_alignment.label"
+    },
+    {
+      "type": "select",
+      "id": "layout_mobile",
+      "options": [
+        {
+          "value": "column",
+          "label": "t:sections.image-with-text.settings.layout_mobile.options__1.label"
+        },
+        {
+          "value": "column-reverse",
+          "label": "t:sections.image-with-text.settings.layout_mobile.options__2.label"
+        }
+      ],
+      "default": "column",
+      "label": "t:sections.image-with-text.settings.layout_mobile.label"
     },
     {
       "type": "header",

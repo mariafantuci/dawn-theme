@@ -6,6 +6,14 @@
   position: relative;
 }
 
+.image-with-text__grid-mobile--column{
+  flex-direction: column;
+}
+
+.image-with-text__grid-mobile--column-reverse{
+  flex-direction: column-reverse;
+}
+
 @media screen and (min-width: 750px) {
   .image-with-text__grid--reverse {
     flex-direction: row-reverse;
