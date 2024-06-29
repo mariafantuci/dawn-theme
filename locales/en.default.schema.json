@@ -1467,6 +1467,9 @@
             "heading": {
               "label": "Heading",
               "default": "Image with text"
+            },
+            "heading_color": {
+              "label": "Heading text color"
             }
           }
         },
@@ -1476,6 +1479,9 @@
             "text": {
               "label": "Text",
               "default": "Add a tagline"
+            },
+            "text_color": {
+              "label": "Text color"
             },
             "text_style": {
               "label": "Text style",
@@ -1526,6 +1532,9 @@
               "info": "Leave the label blank to hide the button.",
               "default": "Button label"
             },
+            "button_color": {
+              "label": "Button text color"
+            },
             "button_link": {
               "label": "Button link"
             },
@@ -1558,7 +1567,7 @@
           "options__4": {
             "label": "Large"
           },
-          "label": "Image height"
+          "label": "Media height"
         },
         "desktop_image_width": {
           "options__1": {

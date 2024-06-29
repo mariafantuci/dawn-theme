@@ -93,6 +93,7 @@
                   <h2
                     class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
                     {{ block.shopify_attributes }}
+                    {%- if block.settings.heading_color != blank -%} style="color: {{ block.settings.heading_color }};" {%- endif -%}
                   >
                     {{ block.settings.heading }}
                   </h2>
@@ -104,7 +105,14 @@
                     {{ block.settings.caption | escape }}
                   </p>
                 {%- when 'text' -%}
-                  <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+                  {% if block.settings.text_color != blank %} 
+                    <style>
+                      .image-with-text__text-content-{{ block.id }} p{
+                        color: {{ block.settings.text_color }};
+                      }
+                    </style>
+                  {% endif %}
+                  <div class="image-with-text__text image-with-text__text-content-{{ block.id }} rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                     {{ block.settings.text }}
                   </div>
                 {%- when 'button' -%}
@@ -117,6 +125,9 @@
                       {% endif %}
                       class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
                       {{ block.shopify_attributes }}
+                      {% if block.settings.button_label_color != blank %}
+                        style="color: {{ block.settings.button_label_color }};"
+                      {% endif %}
                     >
                       {{ block.settings.button_label | escape }}
                     </a>
@@ -386,6 +397,12 @@
           "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
         },
         {
+          "type": "color",
+          "id": "heading_color",
+          "label": "t:sections.image-with-text.blocks.heading.settings.heading_color.label",
+          "default": "#000"
+        },
+        {
           "type": "select",
           "id": "heading_size",
           "options": [
@@ -476,6 +493,12 @@
           "label": "t:sections.image-with-text.blocks.text.settings.text.label"
         },
         {
+          "type": "color",
+          "id": "text_color",
+          "label": "t:sections.image-with-text.blocks.caption.settings.text_color.label",
+          "default": "#000"
+        },
+        {
           "type": "select",
           "id": "text_style",
           "options": [
@@ -504,6 +527,12 @@
           "default": "t:sections.image-with-text.blocks.button.settings.button_label.default",
           "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
           "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "color",
+          "id": "button_label_color",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_color.label",
+          "default": "#fafafa"
         },
         {
           "type": "url",
