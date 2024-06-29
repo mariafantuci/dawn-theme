@@ -1352,7 +1352,7 @@
         },
         "height": {
           "options__1": {
-            "label": "Adapt to image"
+            "label": "Adapt to Media"
           },
           "options__2": {
             "label": "Small"
@@ -1363,7 +1363,7 @@
           "options__4": {
             "label": "Large"
           },
-          "label": "Image height"
+          "label": "Media height"
         },
         "desktop_image_width": {
           "options__1": {
@@ -1375,15 +1375,14 @@
           "options__3": {
             "label": "Large"
           },
-          "label": "Desktop image width",
-          "info": "Image is automatically optimized for mobile."
+          "label": "Desktop Media width"
         },
         "layout": {
           "options__1": {
-            "label": "Image first"
+            "label": "Media first"
           },
           "options__2": {
-            "label": "Image second"
+            "label": "Media second"
           },
           "label": "Desktop media placement"
         },
