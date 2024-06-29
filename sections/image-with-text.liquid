@@ -118,10 +118,14 @@
                 {%- when 'button' -%}
                   {%- if block.settings.button_label != blank -%}
                     <a
-                      {% if block.settings.button_link == blank %}
+                      {% if block.settings.button_link == blank and block.settings.button_link_section == blank%}
                         role="link" aria-disabled="true"
                       {% else %}
-                        href="{{ block.settings.button_link }}"
+                      {% assign btnLink = block.settings.button_link %}
+                      {% if block.settings.button_link_section != blank %}
+                        {% assign btnLink = block.settings.button_link_section %}
+                      {% endif %}
+                        href="{{ btnLink }}"
                       {% endif %}
                       class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
                       {{ block.shopify_attributes }}
@@ -538,6 +542,12 @@
           "type": "url",
           "id": "button_link",
           "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "text",
+          "id": "button_link_section",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_link_section.label",
+          "info": "t:sections.image-with-text.blocks.button.settings.button_link_section.info"
         },
         {
           "type": "checkbox",

@@ -1532,6 +1532,10 @@
               "info": "Leave the label blank to hide the button.",
               "default": "Button label"
             },
+            "button_link_section": {
+              "label": "Section link",
+              "info": "Link to a current page section, using the section ID. Example #section_id"
+            },
             "button_color": {
               "label": "Button text color"
             },
