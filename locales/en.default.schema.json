@@ -1352,7 +1352,7 @@
         },
         "height": {
           "options__1": {
-            "label": "Adapt to image"
+            "label": "Adapt to Media"
           },
           "options__2": {
             "label": "Small"
@@ -1363,7 +1363,7 @@
           "options__4": {
             "label": "Large"
           },
-          "label": "Image height"
+          "label": "Media height"
         },
         "desktop_image_width": {
           "options__1": {
@@ -1375,18 +1375,25 @@
           "options__3": {
             "label": "Large"
           },
-          "label": "Desktop image width",
-          "info": "Image is automatically optimized for mobile."
+          "label": "Desktop Media width"
         },
         "layout": {
           "options__1": {
-            "label": "Image first"
+            "label": "Media first"
           },
           "options__2": {
-            "label": "Image second"
+            "label": "Media second"
           },
-          "label": "Desktop image placement",
-          "info": "Image first is the default mobile layout."
+          "label": "Desktop media placement"
+        },
+        "layout_mobile": {
+          "options__1": {
+            "label": "Media top"
+          },
+          "options__2": {
+            "label": "Media bottom"
+          },
+          "label": "Mobile media placement"
         },
         "desktop_content_alignment": {
           "options__1": {
@@ -1399,6 +1406,12 @@
             "label": "Right"
           },
           "label": "Desktop content alignment"
+        },
+        "container_background_color_outside": {
+          "label": "Outside background color"
+        },
+        "container_background_color_inside": {
+          "label": "Inside background color"
         },
         "desktop_content_position": {
           "options__1": {
@@ -1432,6 +1445,26 @@
             "label": "Right"
           },
           "label": "Mobile content alignment"
+        },
+        "video_settings": {
+          "header": {
+            "content": "Video settings"
+          },
+          "video": {
+            "label": "Video URL"
+          },
+          "loop": {
+            "label": "Loop video",
+            "default": "true"
+          },
+          "auto_load": {
+            "label": "Auto load",
+            "default": "true"
+          },
+          "muted": {
+            "label": "Muted",
+            "default": "true"
+          }
         }
       },
       "blocks": {
@@ -1441,6 +1474,9 @@
             "heading": {
               "label": "Heading",
               "default": "Image with text"
+            },
+            "heading_color": {
+              "label": "Heading text color"
             }
           }
         },
@@ -1450,6 +1486,9 @@
             "text": {
               "label": "Text",
               "default": "Add a tagline"
+            },
+            "text_color": {
+              "label": "Text color"
             },
             "text_style": {
               "label": "Text style",
@@ -1500,6 +1539,13 @@
               "info": "Leave the label blank to hide the button.",
               "default": "Button label"
             },
+            "button_link_section": {
+              "label": "Section link",
+              "info": "Link to a current page section, using the section ID. Example #section_id"
+            },
+            "button_color": {
+              "label": "Button text color"
+            },
             "button_link": {
               "label": "Button link"
             },
@@ -1532,7 +1578,7 @@
           "options__4": {
             "label": "Large"
           },
-          "label": "Image height"
+          "label": "Media height"
         },
         "desktop_image_width": {
           "options__1": {

@@ -138,6 +138,14 @@
 }
 
 @media screen and (max-width: 749px) {
+  .image-with-text__grid-mobile--column{
+    flex-direction: column;
+  }
+  
+  .image-with-text__grid-mobile--column-reverse{
+    flex-direction: column-reverse;
+  }
+  
   .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__media-item:after,
   .image-with-text.collapse-corners:not(.image-with-text--overlap) .grid__item .image-with-text__media,
   .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__media img,
