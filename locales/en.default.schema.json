@@ -1400,6 +1400,12 @@
           },
           "label": "Desktop content alignment"
         },
+        "container_background_color_outside": {
+          "label": "Outside background color"
+        },
+        "container_background_color_inside": {
+          "label": "Inside background color"
+        },
         "desktop_content_position": {
           "options__1": {
             "label": "Top"
