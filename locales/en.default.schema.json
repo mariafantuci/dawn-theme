@@ -1432,6 +1432,26 @@
             "label": "Right"
           },
           "label": "Mobile content alignment"
+        },
+        "video_settings": {
+          "header": {
+            "content": "Video settings"
+          },
+          "video": {
+            "label": "Video URL"
+          },
+          "loop": {
+            "label": "Loop video",
+            "default": "true"
+          },
+          "auto_load": {
+            "label": "Auto load",
+            "default": "true"
+          },
+          "muted": {
+            "label": "Muted",
+            "default": "true"
+          }
         }
       },
       "blocks": {
